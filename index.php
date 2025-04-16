@@ -1,3 +1,9 @@
+<?php
+
+require_once('connexionBD.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
