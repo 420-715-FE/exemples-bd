@@ -13,6 +13,6 @@ require_once('connexionBD.php');
     <link rel="stylesheet" href="water.css">
 </head>
 <body>
-   
+   <?php include('pages/liste.php'); ?>
 </body>
 </html>
