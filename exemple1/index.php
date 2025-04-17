@@ -13,6 +13,15 @@ require_once('connexionBD.php');
     <link rel="stylesheet" href="water.css">
 </head>
 <body>
-   <?php include('pages/liste.php'); ?>
+<?php
+
+$page = isset($_GET['page']) ? $_GET['page'] : '';
+
+switch($page) {
+    default:
+        include('pages/liste.php');
+}
+
+?>
 </body>
 </html>
