@@ -32,6 +32,7 @@ appelé `id`. Ce paramètre contient la clé primaire du contact à afficher, mo
 */
 if (isset($_GET['id'])) {
     // On veut récupérer les nom, prénom et nom complet du contact afin de pouvoir les afficher.
+    $idContact = intval($_GET['id']);
 
     /*
     CONTRE-EXEMPLE
@@ -72,8 +73,8 @@ if (isset($_GET['id'])) {
 Chargement du bon fichier PHP selon la valeur de `$page`.
 
 Chacun des fichiers dans `pages` contient une fonction `title` qui affiche le contenu de la balise `title` de la page,
-et une fonction `body` qui affiche le contenu de la balise `body` de la page. Chacune de ces fonctions reçoit au besoin
-la variable `$bd` en paramètre, ce qui lui permet d'interagir avec la base de données.
+et une fonction `body` qui affiche le contenu de la balise `body` de la page. Chacune de ces fonctions accepte au besoin
+deux paramètres: `$bd` et `$contact`.
 */
 switch($page) {
     case 'liste':
@@ -100,8 +101,8 @@ switch($page) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php title($bd); ?></title>
+    <title><?php title($bd, $contact); ?></title>
     <link rel="stylesheet" href="water.css">
 </head>
-<body><?php body($bd) ?></body>
+<body><?php body($bd, $contact) ?></body>
 </html>
