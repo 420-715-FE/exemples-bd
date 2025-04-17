@@ -32,7 +32,7 @@ if (!$contact) {
             &nbsp;
             <a
                 onclick="return confirm('Voulez-vous vraiment supprimer le contact « <?= $contact['nom'] . ', ' . $contact['prenom'] ?> » ?')"
-                href="supprimer.php?id=<?= $contact['id'] ?>">
+                href="?page=supprimer&id=<?= $contact['id'] ?>">
                 ❌
             </a>
         </p>
