@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
         exit;
     }
 
-    $nom = trim($_POST['nom']); // Enlève les espaces en début et en fin de chaîne
+    $nom = trim($_POST['nom']);
     $prenom = trim($_POST['prenom']);
     $adresseDom = trim($_POST['adresseDom']);
     $adresseTrv = trim($_POST['adresseTrv']);
